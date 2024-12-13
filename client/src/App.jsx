@@ -1,7 +1,9 @@
+import { Card } from "./Card.jsx";
+
 let App = () => {
   return (
     <>
-      Hello from frontend
+      <Card />
     </>
   )
 }
