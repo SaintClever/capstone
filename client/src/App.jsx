@@ -6,7 +6,7 @@ let App = () => {
     <div>
       <h1>Goatify Me 🐐</h1>
       <div style={{display: "flex", flex: "wrap"}}>
-        <Form style={{width: "45%"}} />
+        <Form style={{width: "35%"}} />
         <Card  style={{width: "45%"}}/>
       </div>
     </div>
