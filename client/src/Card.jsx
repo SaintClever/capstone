@@ -18,11 +18,11 @@ let Card = () => {
   return (
     <div>
       {data.map((user) => (
-        <div key={user.firstName} style={cardStyle}>
+        <div key={user.firstName} className="cardStyle">
           <img 
             src={user.image} 
             alt={`${user.firstName} ${user.lastName}`} 
-            style={imageStyle} 
+            className="imageStyle" 
           />
           <h3>{user.firstName} {user.lastName}</h3>
           <p><strong>Title:</strong> {user.title}</p>
@@ -34,24 +34,6 @@ let Card = () => {
       ))}
     </div>
   );
-};
-
-const cardStyle = {
-  fontFamily: "Arial",
-  fontSize: "15px",
-  border: "1px solid #eee",
-  borderRadius: "5px",
-  padding: "15px",
-  margin: "15px",
-  boxShadow: "0 5px 5px rgba(0, 0, 0, 0.1)",
-  // textAlign: "center",
-};
-
-const imageStyle = {
-  width: "150px",
-  height: "150px",
-  borderRadius: "50%",
-  objectFit: "cover",
 };
 
 export { Card };
