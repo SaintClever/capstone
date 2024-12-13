@@ -60,4 +60,15 @@ let deleteUser = async (req, res) => {
   }
 }
 
-export { createUser, readUser, updateUser, deleteUser };
+let searchUser = async (req, res) => {
+  const { name } = req.query;
+
+  try {
+    let searchedUser = await UserModel.find({ "name": name });
+    res.json(searchedUser);
+  } catch(error) {
+    res.status(500).json({ "message": error.message });
+  }
+}
+
+export { createUser, readUser, updateUser, deleteUser, searchUser };
