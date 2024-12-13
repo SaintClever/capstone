@@ -1,11 +1,14 @@
+import { Form } from "./Form.jsx";
 import { Card } from "./Card.jsx";
 
 let App = () => {
   return (
-    <div style={{ display: "flex", flex: "wrap"}}>
+    <div>
       <h1>Goatify Me</h1>
-      <div style={{width: "50%"}}>Input</div>
-      <Card  style={{width: "25%"}}/>
+      <div style={{ display: "flex", flex: "wrap"}}>
+        <Form style={{width: "45%"}} />
+        <Card  style={{width: "45%"}}/>
+      </div>
     </div>
   )
 }
