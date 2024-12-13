@@ -1,28 +1,12 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-
-let Card = () => {
-  const [data, setData] = useState([]);
-
-  const getData = async () => {
-    let response = await axios.get("http://localhost:3000/api");
-    console.log(response.data);
-    setData(response.data);
-  }
-
-  useEffect(() => {
-    getData();
-  }, []);
-
-
+const Card = ({ data }) => {
   return (
-    <div>
+    <div className="cardStyle">
       {data.map((user) => (
-        <div key={user.firstName} className="cardStyle">
-          <img 
-            src={user.image} 
-            alt={`${user.firstName} ${user.lastName}`} 
-            className="imageStyle" 
+        <div key={user.firstName}>
+          <img
+            src={user.image}
+            alt={`${user.firstName} ${user.lastName}`}
+            className="imageStyle"
           />
           <h3>{user.firstName} {user.lastName}</h3>
           <p><strong>Title:</strong> {user.title}</p>

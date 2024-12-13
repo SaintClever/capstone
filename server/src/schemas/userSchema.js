@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 // Schema
 const userSchema = new mongoose.Schema({
-  "image": { "type": String },
+  "image": { "type": String, "required": true },
   "firstName": { "type": String, "required": true },
   "lastName": { "type": String, "required": true},
   "title": { "type": String, "required": true },

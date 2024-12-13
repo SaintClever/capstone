@@ -41,6 +41,7 @@ button {
 }
 
 .cardStyle {
+  /* width: 55%; */
   font-family: Arial;
   font-size: 15px;
   border: 1px solid #eee;
