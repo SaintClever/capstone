@@ -4,7 +4,7 @@ import { mongoose } from "./config/userDB.js";
 import { userRoutes } from "./routes/userRoutes.js";
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 mongoose;
 
 app.use(cors());
@@ -13,5 +13,5 @@ app.use("/", userRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server listening on PORT ${PORT}`);
-  console.log("http://localhost:3000/");
+  console.log(`http://localhost:${PORT}/`);
 });
