@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+
 
 const Form = ({ onSubmit }) => {
   const [formData, setFormData] = useState({
@@ -11,6 +12,9 @@ const Form = ({ onSubmit }) => {
     qualification: "",
     bio: ""
   });
+
+  const [showDialog, setShowDialog] = useState(false);
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,7 +35,22 @@ const Form = ({ onSubmit }) => {
       qualification: "",
       bio: ""
     });
+    setShowDialog(true);
   };
+
+  useEffect(() => {
+    let timeoutId;
+    if (showDialog) {
+      timeoutId = setTimeout(() => {
+        setShowDialog(false);
+      }, 3000);
+    }
+    return () => clearTimeout(timeoutId);
+  }, [showDialog]);
+
+
+  const images = ["goat_00", "goat_01"];
+  const randomImage = images[Math.floor(Math.random() * images.length)];
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -40,8 +59,16 @@ const Form = ({ onSubmit }) => {
 
   return (
     <div style={{width: "50%"}}>
+
       <form onSubmit={handleSubmit}>
         <h3>Create</h3>
+        
+        {showDialog && 
+          <div>
+            <h1>You've been Goatified!</h1>
+            <img src={`./assets/${randomImage}.gif`} style={{width: "25%"}}/>
+          </div>
+        }
         <input
           type="text"
           id="image"
