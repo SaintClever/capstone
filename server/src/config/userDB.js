@@ -7,7 +7,6 @@ const userDB = async () => {
     await mongoose.connect(MONGODB_URI, {
       "useNewUrlParser": true,
       "useUnifiedTopology": true,
-      "dbname": "perscholas"
     });
     console.log("Mongoose Connection Successful!");
   } catch (error) {
