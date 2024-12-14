@@ -6,10 +6,10 @@ const userSchema = new mongoose.Schema({
   "firstName": { "type": String, "required": true },
   "lastName": { "type": String, "required": true},
   "title": { "type": String, "required": true },
-  "bio": { "type": String },
   "course": { "type": [String] },
   "expertise": { "type": [String] },
-  "qualification": { "type": [String] }
+  "qualification": { "type": [String] },
+  "bio": { "type": String }
 });
 
 export { userSchema };

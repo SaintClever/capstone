@@ -11,7 +11,6 @@ h1 {
 }
 
 form {
-  /* width: 35%; */
   font-family: Arial;
   font-size: 15px;
   border: 1px solid #eee;
@@ -22,6 +21,7 @@ form {
 }
 
 input, textarea {
+  font-family: Arial, Helvetica, sans-serif;
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -41,7 +41,6 @@ button {
 }
 
 .cardStyle {
-  /* width: 55%; */
   font-family: Arial;
   font-size: 15px;
   border: 1px solid #eee;

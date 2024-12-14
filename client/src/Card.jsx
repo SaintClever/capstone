@@ -1,8 +1,8 @@
 const Card = ({ data }) => {
   return (
-    <div className="cardStyle">
+    <div style={{width: "50%"}}>
       {data.map((user) => (
-        <div key={user.firstName}>
+        <div key={user.firstName} className="cardStyle">
           <img
             src={user.image}
             alt={`${user.firstName} ${user.lastName}`}
