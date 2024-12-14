@@ -35,7 +35,7 @@ let createUser = async (req, res) => {
 
 let readUser = async (req, res) => {
   try {
-    let users = await UserModel.find(req.query);
+    let users = await UserModel.find(req.query).limit(30);
     res.status(200).json(users);
   } catch(error) {
     res.status(500).json({ "message": error.message });
