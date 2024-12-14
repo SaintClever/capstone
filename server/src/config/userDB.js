@@ -7,10 +7,12 @@ const userDB = async () => {
     await mongoose.connect(MONGODB_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      dbName: "perscholas"
     });
     console.log("Mongoose Connection Successful!");
   } catch (error) {
-    console.log("Mongoose Connection Failed!");
+    console.error("Mongoose Connection Failed!", error.message);
+    process.exit(1);
   }
 };
 
