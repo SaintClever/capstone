@@ -17,8 +17,8 @@ let App = () => {
 
   const handleFormSubmit = async (newUser) => {
     try {
-      await axios.post("http://localhost:3000/api", newUser);
-      getData();
+      let response = await axios.post("http://localhost:3000/api", newUser);
+      setData((prevData) => [response.data, ...prevData]); // Add new user to top of list
     } catch (error) {
       console.error("Error adding user:", error);
     }
@@ -28,8 +28,8 @@ let App = () => {
     <div>
       <h1>Goatify Me 🐐</h1>
       <div style={{ display: "flex", flexWrap: "wrap" }}>
-        <Form onSubmit={handleFormSubmit} style={{ width: "35%" }} />
-        <Card data={data} style={{ width: "45%" }} />
+        <Form onSubmit={handleFormSubmit} />
+        <Card data={data} />
       </div>
     </div>
   );
