@@ -1,3 +1,3 @@
 # capstone #
 
-People who owe me money
+A web application used for knighting someone as a GOAT
