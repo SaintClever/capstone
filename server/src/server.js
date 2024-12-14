@@ -1,11 +1,11 @@
 import express from "express";
 import cors from "cors";
-import { userDB } from "./config/userDB.js";
+import { mongoose } from "./config/userDB.js";
 import { userRoutes } from "./routes/userRoutes.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-userDB;
+mongoose;
 
 app.use(cors());
 app.use(express.json());

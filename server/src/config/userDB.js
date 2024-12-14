@@ -16,4 +16,4 @@ const userDB = async () => {
 };
 
 userDB();
-export { userDB };
+export { mongoose };
