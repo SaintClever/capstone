@@ -7,7 +7,7 @@ let App = () => {
   const [data, setData] = useState([]);
 
   const getData = async () => {
-    // let response = await axios.get("http://localhost:3000/api");
+    // let response = await axios.get("http://localhost:1000/api");
     let response = await axios.get("https://capstone-3cku.onrender.com/api");
     setData(response.data);
   };
@@ -18,7 +18,7 @@ let App = () => {
 
   const handleFormSubmit = async (newUser) => {
     try {
-      // let response = await axios.post("http://localhost:3000/api", newUser);
+      // let response = await axios.post("http://localhost:1000/api", newUser);
       let response = await axios.post("https://capstone-3cku.onrender.com/api", newUser);
       setData((prevData) => [response.data, ...prevData]); // Add new user to top of list
     } catch (error) {
