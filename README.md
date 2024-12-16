@@ -12,7 +12,9 @@ client:
 <br>
 <br>
 
-![goatifyMe](./client/assets/goatifyMe_00.gif "goatifyMe")
+<a href="https://youtu.be/ZtyMQxgS7PA" targ="_blank">
+  <img src="./client/assets/goatifyMe_00.gif" />
+</a>
 
 Trying to understand the basics of react so I aimed to keep this app simple...<br>
 By attempting to use the basic CRUD operations if possible and create a user profile creator / viewer.

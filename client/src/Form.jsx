@@ -13,7 +13,7 @@ const Form = ({ onSubmit }) => {
     bio: ""
   });
 
-  const [showDialog, setShowDialog] = useState(false);
+  // const [showDialog, setShowDialog] = useState(false);
 
 
   const handleSubmit = (e) => {
@@ -35,25 +35,37 @@ const Form = ({ onSubmit }) => {
       qualification: "",
       bio: ""
     });
-    setShowDialog(true);
+    // setShowDialog(true);
   };
 
-  useEffect(() => {
-    let timeoutId;
-    if (showDialog) {
-      timeoutId = setTimeout(() => {
-        setShowDialog(false);
-      }, 3000);
-    }
-    return () => clearTimeout(timeoutId);
-  }, [showDialog]);
+  // useEffect(() => {
+  //   let timeoutId;
+  //   if (showDialog) {
+  //     timeoutId = setTimeout(() => {
+  //       setShowDialog(false);
+  //     }, 3000);
+  //   }
+  //   return () => clearTimeout(timeoutId);
+  // }, [showDialog]);
 
 
-  const images = ["goat_00", "goat_01"];
-  const randomImage = images[Math.floor(Math.random() * images.length)];
+  // const images = ["goat_00", "goat_01"];
+  // const randomImage = images[Math.floor(Math.random() * images.length)];
 
   const handleChange = (e) => {
+    // Get the name and value from the inputs below
+    // const name = e.target.name; // firstName
+    // const name = e.target.value;
     const { name, value } = e.target;
+
+    // The dict is destructed
+    // The name is located "firstName"
+    // If the user types "Jane" the value of that input is "Jane"
+    // formData becomes 
+    // {
+    //  ...formData,
+    //  firstName: "Jane"
+    // }
     setFormData({ ...formData, [name]: value });
   };
 
@@ -61,14 +73,13 @@ const Form = ({ onSubmit }) => {
     <div style={{width: "50%"}}>
 
       <form onSubmit={handleSubmit}>
-        <h3>Create</h3>
-        
-        {showDialog && 
+        {/* <h3>Create</h3> */}
+        {/* {showDialog && 
           <div>
             <h1>You've been Goatified!</h1>
             <img src={`./assets/${randomImage}.gif`} style={{width: "25%"}}/>
           </div>
-        }
+        } */}
         <input
           type="text"
           id="image"
