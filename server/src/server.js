@@ -4,7 +4,7 @@ import { mongoose } from "./config/userDB.js";
 import { userRoutes } from "./routes/userRoutes.js";
 
 const app = express();
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 1000;
 mongoose;
 
 app.use(cors());
