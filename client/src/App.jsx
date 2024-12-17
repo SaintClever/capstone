@@ -31,7 +31,7 @@ let App = () => {
       <h1>Goatify Me 🐐</h1>
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         <Form onSubmit={handleFormSubmit} />
-        { data ? (<Card data={data} />) : (<p>Hello</p>)}
+        <Card data={data} />
       </div>
     </div>
   );
