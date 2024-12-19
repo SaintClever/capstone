@@ -2,12 +2,14 @@
 
 ### A web application used for knighting someone as a GOAT ###
 
-server:
+server:<br>
+In server folder: <code>npm start</code>
 - https://capstone-3cku.onrender.com/api
 <br>
 <br>
 
-client:
+client:<br>
+In client folder: <code>npm run dev</code>
 - https://capstone-frontend-kptw.onrender.com/
 <br>
 <br>
